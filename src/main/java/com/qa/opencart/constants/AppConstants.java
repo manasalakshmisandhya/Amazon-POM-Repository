@@ -9,8 +9,8 @@ public class AppConstants {
 
 	public static final String HOME_PAGE_TITLE="Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
 
-	public static final int IPHONE_12_IMAGES=6;
-	public static final int BAT_IMAGES=6;
+	public static final int IPHONE_12_IMAGES=7;
+	public static final int BAT_IMAGES=5;
 	public static final int PLANT_IMAGES=4;
 	public static final int POKEMON_TOY_IMAGES=4;
 }

@@ -108,8 +108,8 @@ public class LoginPageTest extends BaseTest {
 		driver.switchTo().window(cwid);
 		int actImgcount=productinfo.getImagesCount();
 		System.out.println(actImgcount);
-		Assert.assertEquals(actImgcount, imagesCount);
 		driver.close();
+		Assert.assertEquals(actImgcount, imagesCount);
 		driver.switchTo().window(pwid); 
 
 	}
