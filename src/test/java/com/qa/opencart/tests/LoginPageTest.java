@@ -59,8 +59,8 @@ public class LoginPageTest extends BaseTest {
 	@DataProvider
 	public Object[][] getProductData() {
 		return new Object[][] { { "Pokemon toy", "Takaratomy Pokemon Sun And Moon Mini Action Figure (Multicolor)"},
-				{ "flower plant", "Hbriyd black rose flower plant" },
-				{"cricket bats", "SG Sierra Plus Kashmir Willow Cricket Bat" },
+				{"flower plant", "Hbriyd black rose flower plant"},
+				{"cricket bats", "SG Sierra Plus Kashmir Willow Cricket Bat"},
 				{"iphone12", "Apple iPhone 12 (128GB) - Blue"}};
 	
 	}
@@ -88,10 +88,10 @@ public class LoginPageTest extends BaseTest {
 	
 	@DataProvider
 	public Object[][] getImagesCount() {
-		return new Object[][] { { "Pokemon toy", "Takaratomy Pokemon Sun And Moon Mini Action Figure (Multicolor)",AppConstants.POKEMON_TOY_IMAGES },
-				{ "flower plant", "Hbriyd black rose flower plant",AppConstants.PLANT_IMAGES },
-				{ "cricket bats", "SG Sierra Plus Kashmir Willow Cricket Bat",AppConstants.APRON_IMAGES },
-				{"iphone12", "Apple iPhone 12 (128GB) - Blue",AppConstants.IPHONE_11_IMAGES}};
+		return new Object[][] { {"Pokemon toy", "Takaratomy Pokemon Sun And Moon Mini Action Figure (Multicolor)",AppConstants.POKEMON_TOY_IMAGES },
+				{"flower plant", "Hbriyd black rose flower plant",AppConstants.PLANT_IMAGES },
+				{"cricket bats", "SG Sierra Plus Kashmir Willow Cricket Bat",AppConstants.BAT_IMAGES },
+				{"iphone12", "Apple iPhone 12 (128GB) - Blue",AppConstants.IPHONE_12_IMAGES}};
 	}
 	
 	@Test(priority = 7,  dataProvider = "getImagesCount")
