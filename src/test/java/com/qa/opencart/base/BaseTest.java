@@ -32,9 +32,10 @@ public ProductInfoPage productinfo;
 	}
 	
 	
-//	@AfterTest
-//	public void tearDown() {
-//		driver.quit();
-//		
-//	}
+	@AfterTest
+	public void tearDown() {
+		driver.quit();
+	}
+		
+	
 }
