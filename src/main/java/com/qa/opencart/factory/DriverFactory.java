@@ -31,7 +31,7 @@ public class DriverFactory {
 	public WebDriver initDriver(Properties prop) {
 		String Browser = prop.getProperty("browser").toLowerCase();
 		System.out.println("Launching Browser" + Browser);
-		LOG.info("Launching Browser" + Browser);
+		LOG.info("Launching Browser----" + Browser);
 		highlight = prop.getProperty("highlight").trim();
 		optionsManager = new OptionsManager(prop);
 
@@ -74,10 +74,9 @@ public class DriverFactory {
 		// mvn clean install -Denv="dev"
 		// mvn clean install
 		String envName = System.getenv("env");
-		System.out.println("-----> Running test cases on environment: ----->" + envName);
-		 LOG.info("-----> Running test cases on environment: ----->" + envName);
 		if (envName == null) {
 			System.out.println("No env is given..hence running it on prod env.....");
+			LOG.info("No env is given..hence running it on prod env....." + envName);
 			try {
 				ip = new FileInputStream(
 						"D:\\JAVA WORKSPACE\\POMSeries\\src\\test\\resources\\config\\config.properties");
@@ -90,10 +89,14 @@ public class DriverFactory {
 			try {
 				switch (envName) {
 				case "qa":
+					 LOG.info("-----> Running test cases on environment: ----->" + envName);
+
 					ip = new FileInputStream(".\\src\\test\\resources\\config\\qa.config.properties");
 					break;
 
 				case "prod":
+					 LOG.info("-----> Running test cases on environment: ----->" + envName);
+
 					ip = new FileInputStream(
 							"D:\\JAVA WORKSPACE\\POMSeries\\src\\test\\resources\\config\\config.properties");
 					break;

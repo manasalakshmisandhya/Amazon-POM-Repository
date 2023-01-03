@@ -1,10 +1,13 @@
 package com.qa.opencart.pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
 	private WebDriver driver;
+	private static final Logger LOG = Logger.getLogger(HomePage.class);
+
 
 	private By Searchbox = By.id("twotabsearchtextbox");
 	private By Logo = By.id("nav-logo-sprites");
@@ -20,6 +23,7 @@ public class HomePage {
 	public String getHomePageTitle() {
 		String homepageTitle = driver.getTitle();
 		System.out.println("Home Page title=" + homepageTitle);
+		LOG.info("Home Page title=" +homepageTitle);
 		return homepageTitle;
 	}
 

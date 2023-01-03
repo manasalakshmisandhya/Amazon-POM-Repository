@@ -1,5 +1,6 @@
 package com.qa.opencart.pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import com.qa.opencart.constants.AppConstants;
@@ -9,6 +10,9 @@ public class SearchPage {
 	
 	private WebDriver driver;
 	private ElementUtil eutil;
+	
+	private static final Logger LOG = Logger.getLogger(SearchPage.class);
+
 
 	By Searchbox = By.id("twotabsearchtextbox");
 	By Searchicon = By.id("nav-search-submit-button");
@@ -22,6 +26,7 @@ public class SearchPage {
 	public String pagetitle() {
 		String title = eutil.waitForTitleIs(AppConstants.DEFAULT_TIMEOUT, AppConstants.HOME_PAGE_TITLE);
 		System.out.println("Title after login" + title);
+		LOG.info("Title after login"+title);
 		return title;
 	}
 
@@ -40,6 +45,7 @@ public class SearchPage {
 		}
 		else {
 			System.out.println("search field is not present in the page");
+			LOG.warn("search box doesn't exist");
 			return null;
 		}
 	}
