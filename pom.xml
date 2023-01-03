@@ -33,13 +33,13 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.3.0</version>
 		</dependency>
-<!-- testng dependency -->
+		<!-- testng dependency -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.4.0</version>
 		</dependency>
-<!-- Reports dependencies -->
+		<!-- Reports dependencies -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
@@ -56,8 +56,8 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectj.version}</version>
 		</dependency>
-		
-		
+
+
 		<!-- apache dependencies -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -84,7 +84,7 @@
 			<artifactId>ooxml-schemas</artifactId>
 			<version>1.1</version>
 		</dependency>
-<!-- Log4J dependencies -->
+		<!-- Log4J dependencies -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>openxml4j</artifactId>
@@ -95,52 +95,50 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.19.0</version>
 		</dependency>
-		
+
 		<!-- Dependency to fix maven install issue -->
 		<dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-            <optional>true</optional>
-</dependency>
-
-
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<build>
-<pluginManagement>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-			</plugin>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.1</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.20</version>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.20</version>
 
-				<configuration>
-					<forkCount>3</forkCount>
-					<reuseForks>true</reuseForks>
-					<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-					<suiteXmlFiles>
-						<suiteXmlFile>.\src\test\resources\testrunners\testng_regression.xml</suiteXmlFile>
-					</suiteXmlFiles>
-					<argLine>
+					<configuration>
+						<forkCount>3</forkCount>
+						<reuseForks>true</reuseForks>
+						<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+						<suiteXmlFiles>
+							<suiteXmlFile>.\src\test\resources\testrunners\testng_regression.xml</suiteXmlFile>
+						</suiteXmlFiles>
+						<argLine>
 						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
 					</argLine>
-				</configuration>
-			</plugin>
+					</configuration>
+				</plugin>
 
 
-		</plugins>
-</pluginManagement>
+			</plugins>
+		</pluginManagement>
 
 
 	</build>
