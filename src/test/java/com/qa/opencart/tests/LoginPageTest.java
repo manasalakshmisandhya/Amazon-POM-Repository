@@ -60,8 +60,8 @@ public class LoginPageTest extends BaseTest {
 	public Object[][] getProductData() {
 		return new Object[][] { { "Pokemon toy", "Takaratomy Pokemon Sun And Moon Mini Action Figure (Multicolor)"},
 				{ "flower plant", "Hbriyd black rose flower plant" },
-				{ "Ecotribe apron", "Ecotribe Premium Cotton Kitchen Apron With Center Pocket, Free Size - Set of 1" },
-				{"iphone11", "Apple iPhone 11 (128GB) - White"}};
+				{"cricket bats", "SG Sierra Plus Kashmir Willow Cricket Bat" },
+				{"iphone12", "Apple iPhone 12 (128GB) - Blue"}};
 	
 	}
 
@@ -90,8 +90,8 @@ public class LoginPageTest extends BaseTest {
 	public Object[][] getImagesCount() {
 		return new Object[][] { { "Pokemon toy", "Takaratomy Pokemon Sun And Moon Mini Action Figure (Multicolor)",AppConstants.POKEMON_TOY_IMAGES },
 				{ "flower plant", "Hbriyd black rose flower plant",AppConstants.PLANT_IMAGES },
-				{ "Ecotribe apron", "Ecotribe Premium Cotton Kitchen Apron With Center Pocket, Free Size - Set of 1",AppConstants.APRON_IMAGES },
-				{"iphone11", "Apple iPhone 11 (128GB) - White",AppConstants.IPHONE_11_IMAGES}};
+				{ "cricket bats", "SG Sierra Plus Kashmir Willow Cricket Bat",AppConstants.APRON_IMAGES },
+				{"iphone12", "Apple iPhone 12 (128GB) - Blue",AppConstants.IPHONE_11_IMAGES}};
 	}
 	
 	@Test(priority = 7,  dataProvider = "getImagesCount")
