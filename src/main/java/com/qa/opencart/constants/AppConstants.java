@@ -1,7 +1,7 @@
 package com.qa.opencart.constants;
 
 public class AppConstants {
-	public static final int DEFAULT_TIMEOUT=2;
+	public static final int DEFAULT_TIMEOUT=3;
 	public static final int DEFAULT_LONG_TIMEOUT=6;
 
 	public static final String LOGIN_PAGE_TITLE= "Amazon Sign In";
